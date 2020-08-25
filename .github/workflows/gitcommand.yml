@@ -2,9 +2,8 @@
 name: Git Command
 on: [push]
 jobs:
-  git:
+  test-git:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
-      - run: 
-        git rev-list HEAD --all --count
+      - run: git rev-list HEAD --all --count
